@@ -9,6 +9,8 @@ Vous trouverez ici différents projets démontrant mes compétences en :
 
 Chaque dossier contient un README dédié avec explications + livrables.
 
+---
+
 ## 📁 1. Tests d’API – Postman
 
 **Projet : BookStore API Testing**
@@ -101,11 +103,11 @@ Chaque dossier contient un README dédié avec explications + livrables.
 
 ## 📞 Contact
 
-👤 Pierre M.  
-📧 Email : pierre.massotte99@gmail;com
-🔗 LinkedIn : 
+👤 Pierre Massotte
+📧 Email : **pierre.massotte99gmail.com**  
+🔗 LinkedIn : **https://www.linkedin.com/in/pierre-massotte**
 
+---
 
 Merci d’avoir visité mon portfolio !  
 N’hésitez pas à me contacter pour toute opportunité QA / Test Logiciel.
-
