@@ -11,7 +11,7 @@ Chaque dossier contient un README dédié avec explications + livrables.
 
 ---
 
-## 📁 1. Tests d’API – Postman
+## 📁 1. Tests d’API Postman
 
 **Projet : BookStore API Testing**
 
@@ -31,7 +31,7 @@ Chaque dossier contient un README dédié avec explications + livrables.
 
 ---
 
-## 📁 2. Gestion des Tests – Xray + Jira
+## 📁 2. Gestion des Tests Xray + Jira
 
 **Projet : Plan de test pour un formulaire de connexion**
 
@@ -49,7 +49,7 @@ Chaque dossier contient un README dédié avec explications + livrables.
 
 ---
 
-## 📁 3. Automatisation Web – Selenium
+## 📁 3. Automatisation Web Selenium
 
 **Projet : Automatisation du site SauceDemo**
 
@@ -69,7 +69,7 @@ Chaque dossier contient un README dédié avec explications + livrables.
 
 ---
 
-## 📁 4. Automatisation Moderne – Playwright
+## 📁 4. Automatisation Moderne Playwright
 
 **Projet : Test E2E sur DemoBlaze**
 
