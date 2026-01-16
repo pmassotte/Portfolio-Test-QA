@@ -27,7 +27,7 @@ Le tout en utilisant des **variables** et des **tests Postman**.
   - `baseUrl = https://petstore.swagger.io/v2`
 
 - `postman-run-petstore.png`  
-  ➜ Capture d’écran de l’exécution de la collection dans Collection Runner avec tous les tests au vert ✅
+  ➜ Capture d’écran de l’exécution de la collection dans Collection Runner avec tous les tests
 
 ---
 
