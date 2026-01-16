@@ -1,0 +1,16 @@
+{
+	"id": "7469567b-5453-4d72-bf55-7afb5f51b7ae",
+	"name": "Petstore",
+	"values": [
+		{
+			"key": "baseUrl",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"color": null,
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2026-01-16T11:58:11.420Z",
+	"_postman_exported_using": "Postman/11.80.3"
+}

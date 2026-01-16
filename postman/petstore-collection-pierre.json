@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "702d05f9-ecec-4de8-8a9a-2c864fcf414c",
+		"name": "Petstore API",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "51545403",
+		"_collection_link": "https://pierre-massotte99-2029219.postman.co/workspace/Pierre-Mtte's-Workspace~31003f12-a112-4647-8661-45beea62c87f/collection/51545403-702d05f9-ecec-4de8-8a9a-2c864fcf414c?action=share&source=collection_link&creator=51545403"
+	},
+	"item": [
+		{
+			"name": "Pets par statut",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const json = pm.response.json();",
+							"",
+							"pm.test(\"Status code is 200\", () => {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response is a non-empty array\", () => {",
+							"    pm.expect(json).to.be.an(\"array\");",
+							"    pm.expect(json.length).to.be.above(0);",
+							"});",
+							"",
+							"const firstPet = json[0];",
+							"pm.collectionVariables.set(\"petId\", firstPet.id);",
+							"",
+							"pm.test(\"We stored a petId for next requests\", () => {",
+							"    pm.expect(firstPet.id).to.exist;",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/pet/findByStatus?status=available",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"pet",
+						"findByStatus"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "available"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pet par Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Pet id matches stored petId\", () => {",
+							"    const json = pm.response.json();",
+							"    const storedId = pm.collectionVariables.get(\"petId\");",
+							"    pm.expect(json.id.toString()).to.eql(storedId.toString());",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/pet/{{petId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"pet",
+						"{{petId}}"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "Créer un pet",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const json = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Pet is created with correct id\", () => {\r",
+							"    pm.expect(json.id).to.eql(111111);\r",
+							"});\r",
+							"\r",
+							"pm.collectionVariables.set(\"newPetId\", json.id);\r",
+							"\r",
+							"pm.test(\"We stored newPetId for delete test\", () => {\r",
+							"    pm.expect(pm.collectionVariables.get(\"newPetId\")).to.exist;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":111111,\"category\":{\"id\":111111,\"name\":\"string\"},\"name\":\"Urgo&Ultime\",\"photoUrls\":[\"string\"],\"tags\":[{\"id\":111111,\"name\":\"portfolioPM\"}],\"status\":\"available\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/pet",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"pet"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST '{{baseUrl}}/pet' -H 'Content-Type: application/json' -d '{\"id\":111111,\"category\":{\"id\":111111,\"name\":\"string\"},\"name\":\"Urgo&Ultime\",\"photoUrls\":[\"string\"],\"tags\":[{\"id\":111111,\"name\":\"portfolioPM\"}],\"status\":\"available\"}'"
+			},
+			"response": []
+		},
+		{
+			"name": "Supprimer newPet",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Delete response contains ok message\", () => {\r",
+							"    const json = pm.response.json();\r",
+							"    pm.expect(json.message).to.eql(pm.collectionVariables.get(\"newPetId\").toString());\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":111111,\"category\":{\"id\":111111,\"name\":\"string\"},\"name\":\"Urgo&Ultime\",\"photoUrls\":[\"string\"],\"tags\":[{\"id\":111111,\"name\":\"portfolioPM\"}],\"status\":\"available\"}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/pet/{{newPetId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"pet",
+						"{{newPetId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "petId",
+			"value": ""
+		},
+		{
+			"key": "newPetId",
+			"value": ""
+		}
+	]
+}
