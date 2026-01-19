@@ -15,12 +15,12 @@ Chaque dossier contient un README dédié avec explications + livrables.
 
 **Projet : BookStore API Testing**
 
-🔗 *API utilisée* : https://demoqa.com/swagger/#/BookStore
+🔗 *API utilisée* : https://petstore.swagger.io
 
 ### Livrables inclus :
-- `/postman/collection.json`
-- `/postman/environment.json`
-- `/postman/report/runner-results.png`
+- `/postman/petstore-collection-pierre.json`
+- `/postman/petstore-env-pierre.json`
+- `/postman/postman-run-petstore.png`
 - `/postman/README.md`
 
 ### Ce que j’ai réalisé :
