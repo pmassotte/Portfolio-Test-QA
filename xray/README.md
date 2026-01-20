@@ -16,7 +16,6 @@ Créer une campagne de tests complète dans **Jira** :
 - BUG-001 / BUG-002 : anomalies créées depuis l’exécution et liées aux tests
 
 ## Preuves
-Voir `xray/screenshots/` :
 - tp-001.png
 - te-001.png
 - bug-001.png
