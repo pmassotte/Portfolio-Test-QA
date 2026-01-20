@@ -36,16 +36,17 @@ Chaque dossier contient un README dédié avec explications + livrables.
 **Projet : Plan de test pour un formulaire de connexion**
 
 ### Livrables inclus :
-- `/xray/test-cases.pdf`
-- `/xray/test-plan.pdf`
-- `/xray/bug-reports/`
+- `/xray/tp-001`
+- `/xray/te-001`
+- `/xray/bug-001`
+- `/xray/bug-002`
 - `/xray/README.md`
 
 ### Ce que j’ai réalisé :
-- Rédaction de user stories
-- 10–15 cas de test
-- Organisation du Test Plan
-- Exécution + bug reports (avec screenshots)
+- Conception de cas de test structurés
+- Organisation d’une campagne de tests Xray
+- Exécution et traçabilité (tests ↔ exécutions ↔ defects)
+- Rédaction de bugs reproductibles dans Jira
 
 ---
 
