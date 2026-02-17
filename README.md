@@ -88,7 +88,7 @@ Chaque dossier contient un README dédié avec explications + livrables.
 - Vérification du message "Product added"
 - Rapport HTML + vidéo générée automatiquement
 
----
+--- -->
 
 ## 🛠️ Compétences QA démontrées
 
@@ -96,10 +96,11 @@ Chaque dossier contient un README dédié avec explications + livrables.
 - Rédaction et structuration des cas de tests
 - Gestion Xray / Jira
 - Tests API (Postman)
-- Automatisation tests Web (Selenium, Playwright)
+  
+<!--- Automatisation tests Web (Selenium, Playwright)
 - Assertions / logs / rapports
-- Détection et description de bugs
-
+- Détection et description de bugs 
+-->
 ---
 
 ## 📞 Contact
