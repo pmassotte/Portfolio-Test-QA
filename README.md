@@ -50,7 +50,7 @@ Chaque dossier contient un README dédié avec explications + livrables.
 
 ---
 
-## 📁 3. Automatisation Web Selenium
+<!--## 📁 3. Automatisation Web Selenium
 
 **Projet : Automatisation du site SauceDemo**
 
